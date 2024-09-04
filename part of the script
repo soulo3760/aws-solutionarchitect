@@ -1,0 +1,7 @@
+chown -R ec2-user:apache /var/www                    ## change ownership of directory and its content, recuresely to user ec2:user and group apache
+chmod 2775 /var/www                                  ## 2 ---2000 is setgid for user 1000 is for sticky notes, 4000 is setuid 
+find /var/www -type d -exec chmod 2775 {} \;          ## This finds all directories under /var/www and sets their permissions to 2775. This ensures that all subdirectories also inherit the group ownership of the parent directory and have appropriate permissions.
+find /var/www -type f -exec chmod 0664 {} \;         #### ths finds all files in this directory and applies chmod 0664
+find /var/www -type f -exec chmod 0664 {} \;
+chmod 755 /etc/update.d/48-cow
+update-motd
