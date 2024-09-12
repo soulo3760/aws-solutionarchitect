@@ -13,4 +13,5 @@ tape ggateeway
 ### snowball devices that have tape gateway 
 aws snowball migrates terabytes to cloud in 4-6 days 
   - can even launch ec2instances 
+  - snowball edge compute optimized/ storage optimized
   - power on and connect to your network
