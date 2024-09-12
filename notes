@@ -10,3 +10,7 @@ file gateway
 volume gateway
 tape ggateeway 
 ### storage gateway
+### snowball devices that have tape gateway 
+aws snowball migrates terabytes to cloud in 4-6 days 
+  - can even launch ec2instances 
+  - power on and connect to your network
