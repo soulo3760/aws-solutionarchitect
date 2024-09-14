@@ -71,4 +71,8 @@ AWS lake formation- can be used with redshift to enrich s3 data, it collect and 
                     -----------ETL
 
 
-
+instance types
+  - general purpose
+  - compute optimized
+  - memory optimized
+  - storage optimized 
