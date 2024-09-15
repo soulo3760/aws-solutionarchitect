@@ -1,3 +1,9 @@
+....
+in a aws organization, billing information on member must not be accessible to anyone 
+including the root user of the member accounts.. SCP to the roor OU 
+...
+
+
 s3 is like google drive 
 s3 storage class
 s3 intelligent tieering 
@@ -77,10 +83,23 @@ instance types
   - memory optimized
   - storage optimized 
 
+AWS direct connect
+  -   CUSTOMER GATEWAY = CPNNECTS TO CUSTOMER MANAGED INTERNAL ROUTING AND FALLOVER 
+  - VIrtual private gateway = sits on the vpc 
+      - connects to diect connect routers witjin the direct connect locations 802.1q vlan
 
+there are two types of connection
+ = dedicated connection > physcial ethernet connection associated with a signle customer
+
+  = hosted connection= usesaws direct connect partner a nd shares with you
 
 storage gateway 
+  - supports local caching 
+-   storage gateway file gateway replaces NFS storage
+   - aws storage gateway volume gateway replaces block storage in on promise
 - vtl is for the tape
+
+
 route 53 
   - active-passive failover configuration helps reduce traffic to a static error page in amzon s3 when 
 route 53 health check determine that the ALB endpoint is unhealthy.
@@ -88,3 +107,27 @@ route 53 health check determine that the ALB endpoint is unhealthy.
 amazon kinesis data firehose - load relatime date into data lakes 
       - can be used to ingest data.
 
+
+use s3 lifecycle to delete items retains recent versions
+
+provision vpc gateway endpoint.
+   -configure route table for the private submte to use the gateay endpoint as the route for all s3 traffic.
+this can be useful when a company has a service that reads large amount of data from amzon s3 bucket.
+the dervice is deployemnt in amazon ec2 instances within the private subnet of a vpc.
+the sesrvice communicates with s3. 
+
+
+amazon comprehend - sentiment analysis reports  
+amazon lex - chat bot
+amazon polly - text to audio 
+amazon transcribe - recording to text 
+amazon translate - translate text to any language
+
+
+AWS secret systems manager - templates to provision ec2 instances
+amazon eventbridge invokes aws lambda function when a specici event occurs...
+
+SQS
+if you want to retain order - use fifo but it is expensive than SQS standard
+dead letter queue
+sns subscription rention period
