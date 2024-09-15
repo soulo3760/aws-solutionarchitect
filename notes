@@ -76,3 +76,15 @@ instance types
   - compute optimized
   - memory optimized
   - storage optimized 
+
+
+
+storage gateway 
+- vtl is for the tape
+route 53 
+  - active-passive failover configuration helps reduce traffic to a static error page in amzon s3 when 
+route 53 health check determine that the ALB endpoint is unhealthy.
+
+amazon kinesis data firehose - load relatime date into data lakes 
+      - can be used to ingest data.
+
