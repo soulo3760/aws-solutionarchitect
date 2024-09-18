@@ -131,3 +131,22 @@ SQS
 if you want to retain order - use fifo but it is expensive than SQS standard
 dead letter queue
 sns subscription rention period
+
+
+systems manager- system manager session manager -  manage ec2 instances and other machines
+
+
+
+amazon kiness data streams and use kinetic data analytics to quety the data
+- ingest the data from on premise data sources and query in real time. 
+
+redshift                  - not realtime
+amazon athena in s3      - not realtime
+elastic casche for redis - not realtime
+
+
+HTTPS endpoint in amazon API gateway 
+api gateway endpoint to invoke an AWS lambda 
+
+
+
