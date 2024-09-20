@@ -3,10 +3,15 @@ in a aws organization, billing information on member must not be accessible to a
 including the root user of the member accounts.. SCP to the roor OU 
 ...
 
+Application uses amazon COGNITO as an indentity provider to authenticate users and return a JSON Web Token. 
+that provides access to protected resources stored in another s3 bucket
+amazon congito indentity pool can assume proper iam role for access to protected content. 
+
+
 
 s3 is like google drive 
 s3 storage class
-s3 intelligent tieering 
+s3 intelligent tiering - desirable when accessing files is inconsistent 
 
 s3 one zone -IA 
 s3 standard 
@@ -55,6 +60,26 @@ dedicated hosts-- pay for a physcial host to run you instances - soft licenes, p
 
 dedicated instances pay bu the hour for instances that run on single tenant hardware
 capacity reservations- reserve capacity for your ec2 for a specific AZ for any duration
+
+
+private subnets are secured and not accessible to outside services
+routing table of the private submtet can be congigured to route the outbound traffic
+to an AWS network firewall. configure domain list rule groups. 
+
+
+Amazon GuardDuty -  monitors and protect against malicious
+
+Amazon detective - analyzes and investigates potential secueity issues (gets data to analyse)
+
+Amazon inspector - scan for software vulnerabilities 
+
+
+systems manager- system manager session manager -  manage ec2 instances and other machines
+system manager patch manager -- patches EC2 instances on a regular schedule
+
+
+encrypt data at rest - KMS
+provision and manage certificates - ACM
 
 
 
@@ -133,9 +158,6 @@ dead letter queue
 sns subscription rention period
 
 
-systems manager- system manager session manager -  manage ec2 instances and other machines
-
-
 
 amazon kiness data streams and use kinetic data analytics to quety the data
 - ingest the data from on premise data sources and query in real time. 
@@ -148,5 +170,10 @@ elastic casche for redis - not realtime
 HTTPS endpoint in amazon API gateway 
 api gateway endpoint to invoke an AWS lambda 
 
+  data archive/ database backups- user/group file share ( Mounted on NFS SMB) --- file gateway 
+       application server       ( Mounted on iScsI)  --------------            volume gateway 
+      back up applicatio          ( Mounted on iScsI VTL) --------------         tape gateway 
+
+aws storage gateay - usess internet ot aws direct connect to transfer data from on premise to cloud
 
 
