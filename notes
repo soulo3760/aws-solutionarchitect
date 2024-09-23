@@ -2,10 +2,16 @@
 in a aws organization, billing information on member must not be accessible to anyone 
 including the root user of the member accounts.. SCP to the roor OU 
 ...
+cross account access...
+trust policy of the role in the production account, add development account as principal
+
+SCP 
+
 
 Application uses amazon COGNITO as an indentity provider to authenticate users and return a JSON Web Token. 
 that provides access to protected resources stored in another s3 bucket
 amazon congito indentity pool can assume proper iam role for access to protected content. 
+
 
 
 
@@ -51,10 +57,14 @@ ultra-low latency.
 EC2 Instnace purchasing options
 on demand instances- pay by the second for the instance you launch
 saving plan... consistent usage per hour for a term of 1-3 years
+-  -  -     compute savings plan 
+
 reserved instances- reduces ec2 cots by commitment to consistent instance configuration type and region for 1-3 years
         ----------- run continously
+
 spot instnaces- reduce unused ec2 instances can be reducen costs signficnantly - can be disrupted when bid price goes above 1 dolllar...
           ---needs one to be flexible on when app runs and they can interrrupted.
+
 dedicated hosts-- pay for a physcial host to run you instances - soft licenes, per core, per -socket reduce costs
           --- best of compliance requirements and reduce cost of licenses.
 
@@ -81,7 +91,11 @@ system manager patch manager -- patches EC2 instances on a regular schedule
 encrypt data at rest - KMS
 provision and manage certificates - ACM
 
-
+RDS
+read-replica - 
+multi-AZ deployment for RDS db instance 
+  multi-AZ instance deployment-  
+  multi-AZ cluster deployment - 
 
 
 EC2 instance is not a managed services
@@ -174,6 +188,22 @@ api gateway endpoint to invoke an AWS lambda
        application server       ( Mounted on iScsI)  --------------            volume gateway 
       back up applicatio          ( Mounted on iScsI VTL) --------------         tape gateway 
 
-aws storage gateay - usess internet ot aws direct connect to transfer data from on premise to cloud
+aws storage gateay - usess internet or aws direct connect to transfer data from on premise to cloud
 
+AWS s3 file gateway - storage for on-prem without modifying existing applications
+
+datasync - large scale data transfer and keeps on-prem and aws synchronized, migration , back up and archiving. to speed data trasnder to S3, EFS and fsx
+
+AWS transfer Family-  supports secure and managed transfer opver FTP, FTPS, SFTP into and out of S3
+
+
+
+in security groups we cannpt add deny rules only allow rules
+
+shared storage - EFS 
+Luster clients - Fsx  >>> its reliable and resilient 
+
+
+cost effective mysql darabase -rds and aurora serveless
+nosql dynamodb
 
