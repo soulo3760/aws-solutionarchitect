@@ -114,6 +114,11 @@ Amazon Athena is used to query s3- analyze data, fast performance - serveless
 AWS glue - prepate and intergrate your data at scale on S3 - write to redshift 
 AWS lake formation- can be used with redshift to enrich s3 data, it collect and cleans data for modelling 
                     -----------ETL
+elastic cache - leaderboards, rate limiters to prevent rate limits
+
+AWS Glue 
+AmazoN SAGEMAKER -  a tool built to run machine learning models and quicksight to visualize the data 
+s
 
 
 instance types
