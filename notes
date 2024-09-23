@@ -4,8 +4,16 @@ including the root user of the member accounts.. SCP to the roor OU
 ...
 cross account access...
 trust policy of the role in the production account, add development account as principal
+--
+tag based access control to authorize and grant cross acoount permissions 
+for the required data. 
+
+improving latency when uploading or downloading from S3 - use S3 with TRansfer accelerators
+to host the application upto gigabytes in size. 
 
 SCP 
+
+Reliability multi-AZ and auto scalling and ALB 
 
 
 Application uses amazon COGNITO as an indentity provider to authenticate users and return a JSON Web Token. 
@@ -23,6 +31,8 @@ s3 one zone -IA
 s3 standard 
 
 
+
+
 file gateway
 volume gateway
 tape ggateeway 
@@ -32,6 +42,19 @@ aws snowball migrates terabytes to cloud in 4-6 days
   - can even launch ec2instances 
   - snowball edge compute optimized/ storage optimized
   - power on and connect to your network
+AWS snowball edge storage otimized device - 
+  - use Database migration Service (DMS) with AWS sCHEMA Conversion Tool (SCT) to migrate the 
+    the database with replication of ongoing changes. 
+AWS snowball edge storage otimized device - 
+  -
+AWS snowmobile vehicle 
+  - 
+
+Sheiled advanced and WAF can prevent DDOS 
+
+WAF associate with ALB and configure rate limiting rule 
+
+
 
 
 local zones, 
