@@ -232,6 +232,20 @@ shared storage - EFS
 Luster clients - Fsx  >>> its reliable and resilient 
 
 
-cost effective mysql darabase -rds and aurora serveless
+cost effective mysql darabase -rds and aurora serveless- postgress and mysql
 nosql dynamodb
 
+
+long running workloads
+on-demand is not suitable
+ 3 year reserved instances are cheaper 
+
+
+
+
+Network Load balancer - UDP and TCP 
+Application load balancer -  http and HTTPS
+AWS compute cost optimizer - offers recommendation on optimization and cost reports
+exceeding threshold - aws cloudwatch billing alerts.
+tracking and cost breakdown per application is possible through cost allocation tags 
+cost explorer visualizes cost in your account.
