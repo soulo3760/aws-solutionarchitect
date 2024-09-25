@@ -1,3 +1,4 @@
+
 ....
 in a aws organization, billing information on member must not be accessible to anyone 
 including the root user of the member accounts.. SCP to the roor OU 
@@ -99,6 +100,8 @@ private subnets are secured and not accessible to outside services
 routing table of the private submtet can be congigured to route the outbound traffic
 to an AWS network firewall. configure domain list rule groups. 
 
+guardrails 
+
 
 Amazon GuardDuty -  monitors and protect against malicious
 
@@ -141,8 +144,6 @@ elastic cache - leaderboards, rate limiters to prevent rate limits
 
 AWS Glue 
 AmazoN SAGEMAKER -  a tool built to run machine learning models and quicksight to visualize the data 
-s
-
 
 instance types
   - general purpose
@@ -165,6 +166,7 @@ storage gateway
 -   storage gateway file gateway replaces NFS storage
    - aws storage gateway volume gateway replaces block storage in on promise
 - vtl is for the tape
+Amazo FSx - SMB related file sharing
 
 
 route 53 
@@ -174,7 +176,7 @@ route 53 health check determine that the ALB endpoint is unhealthy.
 amazon kinesis data firehose - load relatime date into data lakes 
       - can be used to ingest data.
 
-
+S3 Lens - solution to provide a single view of object storage usage and activity across hundreds, or even thousands of objects.
 use s3 lifecycle to delete items retains recent versions
 
 provision vpc gateway endpoint.
@@ -193,6 +195,11 @@ amazon translate - translate text to any language
 
 AWS secret systems manager - templates to provision ec2 instances
 amazon eventbridge invokes aws lambda function when a specici event occurs...
+AWS Config is a config tool that helps you assess, audit, and evaluate the configurations and relationships
+of your resources.
+
+LAMBDA CANNOT RUN 1 HOUR TASKS - its maximum is 15 minutes execution
+LAMBDA CANNOT RUN 10 GB MEMORY TASKS
 
 SQS
 if you want to retain order - use fifo but it is expensive than SQS standard
@@ -227,6 +234,7 @@ AWS transfer Family-  supports secure and managed transfer opver FTP, FTPS, SFTP
 
 
 in security groups we cannpt add deny rules only allow rules
+no need to set outbound traffic in SC
 
 shared storage - EFS 
 Luster clients - Fsx  >>> its reliable and resilient 
@@ -241,7 +249,8 @@ on-demand is not suitable
  3 year reserved instances are cheaper 
 
 
-
+connect WAF to ALB
+Configure scaling group as target in ALB
 
 Network Load balancer - UDP and TCP 
 Application load balancer -  http and HTTPS
